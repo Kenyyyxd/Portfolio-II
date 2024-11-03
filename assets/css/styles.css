@@ -728,6 +728,9 @@ footer {
     .project{
         width: 100%;
     }
+    .project img {
+        filter: none;
+    }
     .thumbnail .project:nth-child(1){
         grid-column: 1/13;
     }
