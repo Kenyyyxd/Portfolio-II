@@ -1,3 +1,14 @@
+//loading
+
+window.addEventListener("load", function () {
+    const loadingScreen = document.getElementById("loading-screen");
+    const mainContent = document.getElementById("main-content");
+
+    loadingScreen.style.display = "none";
+    mainContent.style.display = "block";
+});
+
+
 // projects
 
 const projects = ["project1", "project2", "project3", "project4", "project5", "project6", "project7", "project8"]; // Add more project IDs as needed
