@@ -201,16 +201,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-//remove hash
-
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-
-        setTimeout(() => {
-            history.replaceState(null, null, window.location.pathname);
-        }, 300);
-    });
-});
