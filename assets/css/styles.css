@@ -14,11 +14,6 @@ html {
     scroll-behavior: smooth;
 }
 
-::selection {
-    background-color: #680f10;
-    color: #fff;
-}
-
 /* Loading Screen */
 #loading-screen {
     position: fixed;
@@ -76,6 +71,13 @@ html {
       transform: translateY(-90px) scale(0.3);
     }
   }
+  
+
+
+::selection {
+    background-color: #680f10;
+    color: #fff;
+}
 
 ::-webkit-selection {
     background-color: #680f10;
@@ -240,6 +242,9 @@ header{
     transform: translateY(0);
     transition: transform 0.3s ease-in-out;
 }
+header a{
+    text-decoration: none;
+}
 .brand{
     color: #fff;
     font-size: clamp(0.9rem, 0.829rem + 0.19vw, 1rem);
@@ -327,29 +332,36 @@ nav a:hover{
     margin: 20px 30px;
 }
 
-.navigation-buttons button {
-    padding: 10px 15px;
-    background-color: #333;
-    color: #ccc;
+.navigation-buttons button { 
+    color: #888;
     border: none;
-    border-radius: 5px;
     font-size: clamp(0.8rem, 0.657rem + 0.381vw, 1rem);
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    background-color: transparent;
+    transition: transform 0.2s ease;
+}
+
+.navigation-buttons button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: #888;
+    transition: width 0.3s ease;
 }
 
 .navigation-buttons button:hover {
-    background-color: #680f10;
     transform: translateY(-3px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.navigation-buttons button:focus {
-    outline: none;
-    box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.3);
+.navigation-buttons button:hover::after {
+    width: 100%;
 }
+
 
 
 
@@ -489,6 +501,24 @@ nav a:hover{
     color: #dddddd;
     font-size: clamp(0.9rem, 0.829rem + 0.19vw, 1rem);
 }
+.exp1 a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.1s ease;
+    flex: 1;
+}
+
+.exp1 a:hover {
+    color: #fff;
+    transform: scale(1.01);
+}
+
+.exp1 a:active {
+    transform: scale(0.95);
+}
+
+
 
 
 /* contact */
@@ -706,7 +736,7 @@ nav a:hover{
 footer {
     background-color: #080808;
     color: #ddd;
-    padding: 20px 50px;
+    padding: 20px 50px 5px 50px;
     text-align: center;
 }
 
@@ -908,10 +938,6 @@ footer {
     }
     .navigation-buttons {
         margin: 20px 10px;
-    }
-    
-    .navigation-buttons button {
-        padding: 5px 10px;
     }
 }
 
