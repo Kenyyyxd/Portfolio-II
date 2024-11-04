@@ -39,8 +39,8 @@ function generateNavButtons() {
 
     return `
         <div class="navigation-buttons">
-            <button onclick="goBack()">Go Back</button>
-            ${isLastProject ? '' : '<button onclick="loadNextProject()">Next Project</button>'}
+            <button onclick="goBack()">&#10229; Go Back</button>
+            ${isLastProject ? '' : '<button onclick="loadNextProject()">Next Project &#10230;</button>'}
         </div>
     `;
 }
