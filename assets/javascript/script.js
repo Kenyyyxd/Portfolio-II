@@ -11,7 +11,7 @@ window.addEventListener("load", function () {
 
 // projects
 
-const projects = ["project1", "project2", "project3", "project4", "project5", "project6", "project7", "project8"]; // Add more project IDs as needed
+const projects = ["project1", "project2", "project3", "project4", "project5", "project6", "project7", "project8", "project9"]; // Add more project IDs as needed
 let currentProjectIndex = 0;
 
 function loadProjectPage(projectId) {
